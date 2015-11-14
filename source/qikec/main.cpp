@@ -50,6 +50,7 @@ int main( int argc, char ** argv )
 	// init the app
 
 	QApplication a( argc, argv );
+	a.setQuitOnLastWindowClosed(false);
 
 	// create our root window
 

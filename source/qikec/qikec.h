@@ -53,6 +53,7 @@
 #include <QEvent>
 #include <QThread>
 #include <QFileInfo>
+#include <QSystemTrayIcon>
 
 #include "client.h"
 #include "config.h"
@@ -162,9 +163,17 @@ typedef class _qikecRoot : public QMainWindow, public Ui::ikecRoot
 
 	public:
 
+	QSystemTrayIcon *systray;
+
 	_qikecRoot( QWidget * parent = NULL ) : QMainWindow( parent )
 	{
 		setupUi( this );
+
+		this->setAttribute(Qt::WA_QuitOnClose, false);
+
+		systray = new QSystemTrayIcon( QIcon(QString::fromUtf8(":/png/png/ikec.png")), this );
+		connect( systray, SIGNAL( activated(QSystemTrayIcon::ActivationReason) ), this, SLOT( onSystrayActivated(QSystemTrayIcon::ActivationReason) ) );
+		systray->show();
 
 		connect( pushButtonConnect, SIGNAL( clicked() ), this, SLOT( siteConnect() ) );
 		connect( pushButtonExit, SIGNAL( clicked() ), this, SLOT( siteDisconnect() ) );
@@ -178,6 +187,11 @@ typedef class _qikecRoot : public QMainWindow, public Ui::ikecRoot
 
 	void siteConnect();
 	void siteDisconnect();
+
+	void onSystrayActivated(QSystemTrayIcon::ActivationReason reason)
+	{
+		this->show();
+	}
 
 }qikecRoot;
 

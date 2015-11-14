@@ -260,6 +260,6 @@ void _qikecRoot::siteDisconnect()
 	{
 		// close the application
 
-		close();
+		qApp->quit();
 	}
 }
