@@ -47,7 +47,9 @@ set(
 set(
 	SEARCH_LIB
 	/usr/local/lib
-	/usr/lib )
+	/usr/local/lib64
+	/usr/lib 
+	/usr/lib64 )
 
 set(
 	SEARCH_BIN
@@ -61,6 +63,7 @@ set(
 	/usr/share
 	/usr )
 
+set(Qt5_DIR /usr/lib64/cmake/Qt5)
 #
 # Apple OSX Target Constants
 #
@@ -527,10 +530,7 @@ if( QTGUI )
 
 	add_definitions( -DQT_THREAD_SUPPORT )
 
-	find_package(
-		Qt4
-		COMPONENTS QtCore QtGui REQUIRED )
-
+    find_package(Qt5 COMPONENTS Core Gui REQUIRED )
 	if( NOT QT_QTGUI_FOUND )
 
 		message(

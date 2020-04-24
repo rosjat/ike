@@ -46,14 +46,14 @@ long _IKED_EXEC::func( void * arg )
 	long result = iked_func( arg );
 
 	// openssl thread cleanup
-	ERR_remove_state( 0 );
+	ERR_remove_thread_state( NULL );
 
 	return result;
 }
 
 bool _IKED::rand_bytes( void * buff, long size )
 {
-	RAND_pseudo_bytes( ( unsigned char * ) buff, size );
+	RAND_bytes( ( unsigned char * ) buff, size );
 	return true;
 }
 
