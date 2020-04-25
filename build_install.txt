@@ -1,0 +1,279 @@
+the changes are wotking somewhat so this is what cmake and make, make install output.
+
+$ cmake -DCMAKE_INSTALL_PREFIX=/usr -DQTGUI=YES -DETCDIR=/etc -DNATT=YES --debug-output
+
+Running with debug output on.
+CMake Warning:
+  No source or binary directory provided.  Both will be assumed to be the
+  same as the current working directory, but note that this warning will
+  become a fatal error in future CMake releases.
+
+
+-- Using install prefix /usr ...
+   Called from: [1]	/home/mu/projects/ike/CMakeLists.txt
+-- Using etc install path /etc ...
+   Called from: [1]	/home/mu/projects/ike/CMakeLists.txt
+-- Using bin install path /usr/bin ...
+   Called from: [1]	/home/mu/projects/ike/CMakeLists.txt
+-- Using sbin install path /usr/sbin ...
+   Called from: [1]	/home/mu/projects/ike/CMakeLists.txt
+-- Using lib install path /usr/lib64 ...
+   Called from: [1]	/home/mu/projects/ike/CMakeLists.txt
+-- Using man install path /usr/share/man ...
+   Called from: [1]	/home/mu/projects/ike/CMakeLists.txt
+-- Using library -lpthread
+   Called from: [1]	/home/mu/projects/ike/CMakeLists.txt
+-- Using binary /usr/bin/flex ...
+   Called from: [1]	/home/mu/projects/ike/CMakeLists.txt
+-- Using binary /usr/bin/bison ...
+   Called from: [1]	/home/mu/projects/ike/CMakeLists.txt
+-- Enabled NAT Traversal support ...
+   Called from: [1]	/home/mu/projects/ike/CMakeLists.txt
+-- Enabled Client QT GUI support ...
+   Called from: [1]	/home/mu/projects/ike/CMakeLists.txt
+   Entering             /home/mu/projects/ike/source/qikea
+   Called from: [1]	/home/mu/projects/ike/CMakeLists.txt
+   Returning to         /home/mu/projects/ike
+   Called from: [1]	/home/mu/projects/ike/CMakeLists.txt
+   Entering             /home/mu/projects/ike/source/qikec
+   Called from: [1]	/home/mu/projects/ike/CMakeLists.txt
+   Returning to         /home/mu/projects/ike
+   Called from: [1]	/home/mu/projects/ike/CMakeLists.txt
+   Entering             /home/mu/projects/ike/source/iked
+   Called from: [1]	/home/mu/projects/ike/CMakeLists.txt
+CMake Warning (dev) at source/iked/CMakeLists.txt:111 (add_custom_command):
+  Policy CMP0050 is not set: Disallow add_custom_command SOURCE signatures.
+  Run "cmake --help-policy CMP0050" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+
+  The SOURCE signatures of add_custom_command are no longer supported.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+   Called from: [1]	/home/mu/projects/ike/source/iked/CMakeLists.txt
+CMake Warning (dev) at source/iked/CMakeLists.txt:120 (add_custom_command):
+  Policy CMP0050 is not set: Disallow add_custom_command SOURCE signatures.
+  Run "cmake --help-policy CMP0050" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+
+  The SOURCE signatures of add_custom_command are no longer supported.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+   Called from: [1]	/home/mu/projects/ike/source/iked/CMakeLists.txt
+   Returning to         /home/mu/projects/ike
+   Called from: [1]	/home/mu/projects/ike/CMakeLists.txt
+   Entering             /home/mu/projects/ike/source/ikec
+   Called from: [1]	/home/mu/projects/ike/CMakeLists.txt
+   Returning to         /home/mu/projects/ike
+   Called from: [1]	/home/mu/projects/ike/CMakeLists.txt
+   Entering             /home/mu/projects/ike/source/libike
+   Called from: [1]	/home/mu/projects/ike/CMakeLists.txt
+   Returning to         /home/mu/projects/ike
+   Called from: [1]	/home/mu/projects/ike/CMakeLists.txt
+   Entering             /home/mu/projects/ike/source/libip
+   Called from: [1]	/home/mu/projects/ike/CMakeLists.txt
+   Returning to         /home/mu/projects/ike
+   Called from: [1]	/home/mu/projects/ike/CMakeLists.txt
+   Entering             /home/mu/projects/ike/source/libidb
+   Called from: [1]	/home/mu/projects/ike/CMakeLists.txt
+   Returning to         /home/mu/projects/ike
+   Called from: [1]	/home/mu/projects/ike/CMakeLists.txt
+   Entering             /home/mu/projects/ike/source/libith
+   Called from: [1]	/home/mu/projects/ike/CMakeLists.txt
+   Returning to         /home/mu/projects/ike
+   Called from: [1]	/home/mu/projects/ike/CMakeLists.txt
+   Entering             /home/mu/projects/ike/source/liblog
+   Called from: [1]	/home/mu/projects/ike/CMakeLists.txt
+   Returning to         /home/mu/projects/ike
+   Called from: [1]	/home/mu/projects/ike/CMakeLists.txt
+   Entering             /home/mu/projects/ike/source/libpfk
+   Called from: [1]	/home/mu/projects/ike/CMakeLists.txt
+   Returning to         /home/mu/projects/ike
+   Called from: [1]	/home/mu/projects/ike/CMakeLists.txt
+-- Configuring done
+CMake Warning (dev) in source/iked/CMakeLists.txt:
+  Policy CMP0071 is not set: Let AUTOMOC and AUTOUIC process GENERATED files.
+  Run "cmake --help-policy CMP0071" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+
+  For compatibility, CMake is excluding the GENERATED source file(s):
+
+    "/home/mu/projects/ike/source/iked/conf.parse.cpp"
+    "/home/mu/projects/ike/source/iked/conf.token.cpp"
+    "/home/mu/projects/ike/source/iked/conf.parse.hpp"
+
+  from processing by AUTOMOC and AUTOUIC.  If any of the files should be
+  processed, set CMP0071 to NEW.  If any of the files should not be
+  processed, explicitly exclude them by setting the source file property
+  SKIP_AUTOGEN:
+
+    set_property(SOURCE file.h PROPERTY SKIP_AUTOGEN ON)
+
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Generating /home/mu/projects/ike
+   Called from: [1]	/home/mu/projects/ike/CMakeLists.txt
+CMake Warning (dev) in source/iked/CMakeLists.txt:
+  Policy CMP0065 is not set: Do not add flags to export symbols from
+  executables without the ENABLE_EXPORTS target property.  Run "cmake
+  --help-policy CMP0065" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, additional flags may be
+  added to export symbols on all executables regardless of their
+  ENABLE_EXPORTS property.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+   Called from: [1]	/home/mu/projects/ike/source/iked/CMakeLists.txt
+-- Generating /home/mu/projects/ike/source/iked
+   Called from: [1]	/home/mu/projects/ike/source/iked/CMakeLists.txt
+CMake Warning (dev) in source/ikec/CMakeLists.txt:
+  Policy CMP0065 is not set: Do not add flags to export symbols from
+  executables without the ENABLE_EXPORTS target property.  Run "cmake
+  --help-policy CMP0065" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, additional flags may be
+  added to export symbols on all executables regardless of their
+  ENABLE_EXPORTS property.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+   Called from: [1]	/home/mu/projects/ike/source/ikec/CMakeLists.txt
+-- Generating /home/mu/projects/ike/source/ikec
+   Called from: [1]	/home/mu/projects/ike/source/ikec/CMakeLists.txt
+-- Generating /home/mu/projects/ike/source/libike
+   Called from: [1]	/home/mu/projects/ike/source/libike/CMakeLists.txt
+-- Generating /home/mu/projects/ike/source/libip
+   Called from: [1]	/home/mu/projects/ike/source/libip/CMakeLists.txt
+-- Generating /home/mu/projects/ike/source/libidb
+   Called from: [1]	/home/mu/projects/ike/source/libidb/CMakeLists.txt
+-- Generating /home/mu/projects/ike/source/libith
+   Called from: [1]	/home/mu/projects/ike/source/libith/CMakeLists.txt
+-- Generating /home/mu/projects/ike/source/liblog
+   Called from: [1]	/home/mu/projects/ike/source/liblog/CMakeLists.txt
+-- Generating /home/mu/projects/ike/source/libpfk
+   Called from: [1]	/home/mu/projects/ike/source/libpfk/CMakeLists.txt
+CMake Warning (dev) in source/qikea/CMakeLists.txt:
+  Policy CMP0065 is not set: Do not add flags to export symbols from
+  executables without the ENABLE_EXPORTS target property.  Run "cmake
+  --help-policy CMP0065" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, additional flags may be
+  added to export symbols on all executables regardless of their
+  ENABLE_EXPORTS property.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+   Called from: [1]	/home/mu/projects/ike/source/qikea/CMakeLists.txt
+-- Generating /home/mu/projects/ike/source/qikea
+   Called from: [1]	/home/mu/projects/ike/source/qikea/CMakeLists.txt
+CMake Warning (dev) in source/qikec/CMakeLists.txt:
+  Policy CMP0065 is not set: Do not add flags to export symbols from
+  executables without the ENABLE_EXPORTS target property.  Run "cmake
+  --help-policy CMP0065" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, additional flags may be
+  added to export symbols on all executables regardless of their
+  ENABLE_EXPORTS property.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+   Called from: [1]	/home/mu/projects/ike/source/qikec/CMakeLists.txt
+-- Generating /home/mu/projects/ike/source/qikec
+   Called from: [1]	/home/mu/projects/ike/source/qikec/CMakeLists.txt
+-- Generating done
+-- Build files have been written to: /home/mu/projects/ike
+[mu@mu-fedora32 ike]$ sudo make
+[  1%] Automatic MOC and UIC for target ss_ith
+[  1%] Built target ss_ith_autogen
+[  4%] Built target ss_ith
+[  5%] Automatic MOC and UIC for target ss_log
+[  5%] Built target ss_log_autogen
+[  8%] Built target ss_log
+[  9%] Automatic MOC and UIC for target ss_idb
+[  9%] Built target ss_idb_autogen
+[ 13%] Built target ss_idb
+[ 14%] Automatic MOC and UIC for target ss_pfk
+[ 14%] Built target ss_pfk_autogen
+[ 17%] Built target ss_pfk
+[ 18%] Automatic MOC and UIC for target ss_ike
+[ 18%] Built target ss_ike_autogen
+[ 25%] Built target ss_ike
+[ 26%] Automatic MOC and UIC for target ss_ip
+[ 26%] Built target ss_ip_autogen
+[ 36%] Built target ss_ip
+[ 37%] Automatic MOC and UIC for target iked
+[ 37%] Built target iked_autogen
+[ 76%] Built target iked
+[ 77%] Automatic MOC and UIC for target ikec
+[ 77%] Built target ikec_autogen
+[ 81%] Built target ikec
+[ 82%] Automatic MOC and UIC for target qikea
+[ 82%] Built target qikea_autogen
+[ 91%] Built target qikea
+[ 92%] Automatic MOC and UIC for target qikec
+[ 92%] Built target qikec_autogen
+[100%] Built target qikec
+[mu@mu-fedora32 ike]$ sudo make install
+[  1%] Automatic MOC and UIC for target ss_ith
+[  1%] Built target ss_ith_autogen
+[  4%] Built target ss_ith
+[  5%] Automatic MOC and UIC for target ss_log
+[  5%] Built target ss_log_autogen
+[  8%] Built target ss_log
+[  9%] Automatic MOC and UIC for target ss_idb
+[  9%] Built target ss_idb_autogen
+[ 13%] Built target ss_idb
+[ 14%] Automatic MOC and UIC for target ss_pfk
+[ 14%] Built target ss_pfk_autogen
+[ 17%] Built target ss_pfk
+[ 18%] Automatic MOC and UIC for target ss_ike
+[ 18%] Built target ss_ike_autogen
+[ 25%] Built target ss_ike
+[ 26%] Automatic MOC and UIC for target ss_ip
+[ 26%] Built target ss_ip_autogen
+[ 36%] Built target ss_ip
+[ 37%] Automatic MOC and UIC for target iked
+[ 37%] Built target iked_autogen
+[ 76%] Built target iked
+[ 77%] Automatic MOC and UIC for target ikec
+[ 77%] Built target ikec_autogen
+[ 81%] Built target ikec
+[ 82%] Automatic MOC and UIC for target qikea
+[ 82%] Built target qikea_autogen
+[ 91%] Built target qikea
+[ 92%] Automatic MOC and UIC for target qikec
+[ 92%] Built target qikec_autogen
+[100%] Built target qikec
+Install the project...
+-- Install configuration: ""
+-- Installing: /usr/sbin/iked
+-- Set runtime path of "/usr/sbin/iked" to ""
+-- Installing: /usr/share/man/man8/iked.8
+-- Installing: /usr/share/man/man5/iked.conf.5
+-- Installing: /etc/iked.conf.sample
+-- Installing: /usr/bin/ikec
+-- Set runtime path of "/usr/bin/ikec" to ""
+-- Installing: /usr/share/man/man1/ikec.1
+-- Installing: /usr/lib64/libss_ike.so.2.2.1
+-- Set runtime path of "/usr/lib64/libss_ike.so.2.2.1" to ""
+-- Installing: /usr/lib64/libss_ike.so
+-- Installing: /usr/lib64/libss_ip.so.2.2.1
+-- Set runtime path of "/usr/lib64/libss_ip.so.2.2.1" to ""
+-- Installing: /usr/lib64/libss_ip.so
+-- Installing: /usr/lib64/libss_idb.so.2.2.1
+-- Set runtime path of "/usr/lib64/libss_idb.so.2.2.1" to ""
+-- Installing: /usr/lib64/libss_idb.so
+-- Installing: /usr/lib64/libss_ith.so.2.2.1
+-- Installing: /usr/lib64/libss_ith.so
+-- Installing: /usr/lib64/libss_log.so.2.2.1
+-- Set runtime path of "/usr/lib64/libss_log.so.2.2.1" to ""
+-- Installing: /usr/lib64/libss_log.so
+-- Installing: /usr/lib64/libss_pfk.so.2.2.1
+-- Set runtime path of "/usr/lib64/libss_pfk.so.2.2.1" to ""
+-- Installing: /usr/lib64/libss_pfk.so
+-- Installing: /usr/bin/qikea
+-- Set runtime path of "/usr/bin/qikea" to ""
+-- Installing: /usr/share/man/man1/qikea.1
+-- Installing: /usr/bin/qikec
+-- Set runtime path of "/usr/bin/qikec" to ""
+-- Installing: /usr/share/man/man1/qikec.1

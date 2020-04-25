@@ -75,7 +75,7 @@ set(
 	/usr/share
 	/usr )
 
-set(Qt5_DIR /usr/lib64/cmake/Qt5)
+set( CMAKE_PREFIX_PATH /usr/lib64/cmake/Qt5 )
 #
 # Apple OSX Target Constants
 #
@@ -542,15 +542,12 @@ if( QTGUI )
 
 	add_definitions( -DQT_THREAD_SUPPORT )
 
-    find_package(Qt5 COMPONENTS Core Gui REQUIRED )
-	if( NOT QT_QTGUI_FOUND )
+	set(CMAKE_AUTOMOC ON)
+	set(CMAKE_AUTORCC ON)
+	set(CMAKE_AUTOUIC ON)
 
-		message(
-			FATAL_ERROR
-			"Unable to locate required package : QT" )
-
-	endif( NOT QT_QTGUI_FOUND )
-		
+    find_package(Qt5 COMPONENTS Core Gui Widgets REQUIRED )
+	
 	# success
 
 	message(

@@ -22,19 +22,7 @@ link_directories(
 	${IKE_SOURCE_DIR}/source/libip
 	${QT_LIBRARY_DIR} )
 
-include( ${QT_USE_FILE} )
-
-qt4_wrap_ui(
-	UIH_FILES
-	banner.ui
-	filepass.ui
-	root.ui )
-
-qt4_wrap_cpp(
-	CXX_FILES
-	qikec.h )
-
-qt4_add_resources(
+qt5_add_resources(
 	QRC_FILES
 	qikec.qrc )
 
@@ -55,7 +43,9 @@ target_link_libraries(
 	ss_log
 	crypto
 	pthread
-	${QT_LIBRARIES} )
+	Qt5::Core
+	Qt5::Gui 
+	Qt5::Widgets)
 
 if( APPLE )
 
