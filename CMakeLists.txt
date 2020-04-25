@@ -21,6 +21,18 @@ endif( COMMAND cmake_policy )
 # Unix Target Constants
 #
 
+# on systems like fedora we need to put the libraries in /usr/lib64 
+# and not in /usr/lib. Since i am not really a cmake pro i do a simple
+# approach here. Feel free to pro the s**t out of it  ;)
+
+get_property(LIB64 GLOBAL PROPERTY FIND_LIBRARY_USE_LIB64_PATHS)
+
+if ("${LIB64}" STREQUAL "TRUE")
+    set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib64)
+endif()
+
+
+
 add_definitions( -DUNIX )
 
 include( CheckCSourceCompiles )
