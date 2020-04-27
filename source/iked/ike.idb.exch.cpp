@@ -139,7 +139,7 @@ bool _IDB_XCH::new_msgiv( IDB_PH1 * ph1 )
 	EVP_DigestUpdate( ctx_hash, ph1->iv.buff(), ph1->iv.size() );
 	EVP_DigestUpdate( ctx_hash, &msgid, 4 );
 	EVP_DigestFinal( ctx_hash, iv_data, NULL );
-	EVP_MD_CTX_free( ctx_hash );
+	EVP_MD_CTX_reset( ctx_hash );
 
 	iv.set( iv_data, iv_size );
 
